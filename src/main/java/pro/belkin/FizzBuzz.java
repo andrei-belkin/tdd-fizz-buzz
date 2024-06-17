@@ -3,8 +3,12 @@ package pro.belkin;
 import lombok.*;
 
 import java.io.*;
+import java.util.*;
+import java.util.function.*;
 
 public interface FizzBuzz {
+    List<Map.Entry<Predicate<Integer>, String>> getRules();
+
     String getReply(int number);
 
     String getFizzReply();

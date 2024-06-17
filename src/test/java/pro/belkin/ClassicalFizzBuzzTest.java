@@ -78,7 +78,10 @@ public class ClassicalFizzBuzzTest {
 
     @Test
     public void givenFizzBuzzNumber_willReturnFizzBuzz() {
-        final int randomFizzBuzzNumber = RANDOM.nextInt(100000000) * fizzNumber * buzzNumber;
-        assertEquals(fizzBuzzReply, fizzBuzz.getReply(randomFizzBuzzNumber));
+        for (int i = 1; i < 1000; i++) {
+            final int number = fizzNumber * buzzNumber * RANDOM.nextInt(100000000);
+            final String reply = fizzBuzz.getReply(number);
+            assertEquals(fizzBuzzReply, reply);
+        }
     }
 }
